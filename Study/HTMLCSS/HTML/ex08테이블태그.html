@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        1.테이블의 구성요소 -행,열,열이름,선의 두께/종류
+        2.테이블 선언 <table></table>
+        3.줄(행) <tr></tr>
+        4.칸(열) <td></td>
+        5.열(제목) <th></th>
+        
+     -->
+
+     <!-- table태그 -테이블을 만든다고 선언 -->
+
+     <table border="1px solid black" width="300px">
+        <tr bgcolor="yellow">
+            <th>나이</th>
+            <th>이름</th>
+            <th>성별</th>
+
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>정세연</td>
+            <td>여자</td>
+        </tr>
+        <tr>
+            <td>22</td>
+            <td>김미희</td>
+            <td>여자</td>
+
+
+        </tr>
+     </table>
+
+     <br>
+     <br>
+
+     <table border="1px solid black" width="300px">
+        <!-- caption태그 -table의 제목을 나타내는 태그 -->
+        <caption>빅융 선생님들</caption>
+        <tr bgcolor="yellow">
+            <th>나이</th>
+            <th colspan="2">이름/성별</th> 
+            <!-- colspan 한칸 두개로 나누기 -->
+            <th>비고</th>
+
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>정세연</td>
+            <td>여자</td>
+            <td rowspan="2"></td>
+        </tr>
+        <tr>
+            <td>22</td>
+            <td>김미희</td>
+            <td>여자</td>
+
+
+        </tr>
+     </table>
+
+</body>
+</html>

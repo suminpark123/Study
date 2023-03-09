@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div,p,span,a{
+            background-color: chartreuse;
+        }
+
+        p {
+            /* 컨텐츠(글씨,이미지)가 들어올 수 있는 영역의 크기 지정 */
+            width: 200px;
+            height: 200px;
+            /* inline-block : inline속성과 block속성 둘다 가지고 있음 
+            inline:margin이 없음/ block: 크기지정 */
+            display: inline-block;
+        }
+        span{
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+        }
+        a{
+            display: none;
+        }
+
+    </style>
+
+
+
+</head>
+<body>
+    <!-- display속성 : block기본 -->
+    <!-- 한줄을 모두 차지,크기 지정 가능-->
+    <div>하이</div>
+    <P>하이</P>
+    <P>하이</P>
+
+    <hr>
+    <!-- display속성 : inline기본 -->
+    <!-- 컨텐츠 만큼차지, 크기 지정 불가능 -->
+    <span>하이</span>
+    <a>하이</a>
+
+
+
+
+</body>
+</html>
