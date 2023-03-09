@@ -1,0 +1,24 @@
+//터미널 명령어
+//cd :폴더이동 [폴더명]
+//cd.. : 전 폴더이동
+//claer : 명령어 초기화
+//ls : 파일목록확인
+//방향키 위/아래 : 이전 명령어 확인
+//tab : 파일명 자동완성
+//주의사항 : 실행하려고하는 파일의 폴더에 와있는지/ 파일명이 정확한지
+//ctrl + c : 실행중인 js파일중지(서버중지)
+node 파일명
+
+
+power shell 설치후 pm2으로 이용
+pm2 start 파일명 --watch
+staus에 stopped 가 생기면 pm2 kill 입력(서버끄기)
+pm2 log 로그확인
+pm2 list 리스트확인
+pm2 monit 개발완료후 실행명령어
+
+*노드 서버 실행명령어
+node ./server/app.js
+
+*mysql
+npm i mysql --force
