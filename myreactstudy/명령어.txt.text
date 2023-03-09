@@ -1,0 +1,13 @@
+cd :폴더이동
+cd.. : 폴더나가기
+npx create-react-app 폴더명: 리액트프로젝트 생성
+npm start :리액트 시작 (미리보기창 띄우기)
+
+html이 아닌 jsx 
+
+npm install react-router-dom: 라우터돔 설치
+
+
+npm install --force :node_modules  설치 명령어
+
+npm i axios :axios 모듈 설치

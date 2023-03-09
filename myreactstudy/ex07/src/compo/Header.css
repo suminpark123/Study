@@ -1,0 +1,48 @@
+.header {
+  display: flex;
+  /* 플렉스 : 옆으로 쌓기 */
+  height: 60px;
+  align-items: center;
+  background-color: black;
+  position: sticky;
+  /* 스크롤 위치에따른 포지션 */
+  top: 0;
+  z-index: 100;
+  /* object-fit:content: ;비율에 맞게 사이즈 적용 */
+}
+.header_option {
+  display: flex;
+  flex-direction: column;
+  /* 위에서 아래로 플렉스 */
+  margin-left: 10px;
+  margin-right: 10px;
+  color: white;
+}
+.header_nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+.header_searchInput {
+  height: 12px;
+  padding: 10px;
+  border: none;
+}
+
+.header_optionLineOne {
+  font-size: 10px;
+}
+.header_optionLineTwo {
+  font-size: 13px;
+  font-weight: 800;
+  margin-top: 3px;
+}
+
+.header_optionBasket {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+header_optionLineTwoheader_basketCount {
+  margin-right: 10px;
+  margin-left: 10px;
+}
