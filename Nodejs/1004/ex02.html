@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Nodejs서버로 사용자가 입력한 값을 보내기위한 3가지조건 
+        1.form 태그안에 서버주소를 입력할 수 있는 action속성
+        2.input태그안에 구별할 수 있는 name 속성
+        3.서버로 값을 보내기위한 버튼 submit
+    
+    -->
+    <!-- http://127.0.0.1:3000/"> -->
+
+    <form action="http://172.30.1.28:3001/">
+      <input type="text" placeholder="ID값을 입력하세요" name="id" /><br />
+      <input type="password" placeholder="PW값을 입력하세요" name="pw" /><br />
+      <input type="submit" value="제출" />
+    </form>
+  </body>
+</html>

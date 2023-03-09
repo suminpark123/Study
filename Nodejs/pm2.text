@@ -1,0 +1,27 @@
+pm2 : nodejs의 서버파일 프로세스 관리도구
+
+pm2 start [서버파일명] --watch : 서버파일시작
+*--watch 옵션을 입력해야 저장되는 사항을 실시간으로 반영가능
+
+pm2 log : 실시간으로 반영되는 사항들을 확인가능
+
+pm2 kill : 실행되고 있는 서버파일을 삭제
+*수업 시작 전 /공부 끝난 후 꼭 실행하기
+
+pm2 list : 실행되고 있는 서버파일을 확인
+
+*express
+npm init : 패키지.json설치
+npm install express --save : express프레임워크 설치
+
+*body-parser
+npm i body-parser --save
+
+*ejs
+npm i ejs --save
+
+http://127.0.0.1:3001/
+
+*session
+npm i express-session --save
+npm i express-mysql-session --save

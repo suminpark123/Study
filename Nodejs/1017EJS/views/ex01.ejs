@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--EJS 사용하기 전 ,ejs language support 라는 익스텐션 설치 할 것-->
+ <h1>ejs 페이지에 오신걸 환영</h1>
+
+ <!-- 스크립틀릿 : EJS 내에서 Node.js코드를 작성할 수 있는 영역 -->
+ <%
+ let num=3;
+ %>
+ <!-- 표현식 : Node.js 변수를 출력하는 영역 
+        '=' 하나를 포함해서 작성
+-->
+<p>num 안에 있는 값 <%=num%></p>
+
+<hr>
+<%
+let sum=0;
+for(i=1; i<101; i++){
+    sum+=i;
+}%>
+
+<p>1부터 100까지의 합을 구하시오 <%=sum%></p>
+
+<hr>
+
+<h1>자기소개하기</h1>
+<p>안녕하세요 제 이름은 박수민ㅇ닙니다.
+    저의 mbti는 <%=userMbti%>이고,
+    제가 좋아하는 메뉴는 <%=userMenu%>입니다
+</p>
+
+<hr>
+
+
+
+
+
+
+
+</body>
+</html>
