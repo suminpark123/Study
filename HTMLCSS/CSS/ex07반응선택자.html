@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color:brown;
+        }
+
+        div:hover{
+            background-color: aqua;
+        }
+        div:active{
+            width: 400px;
+        }
+        div:hover +p{
+            color: blue;
+        }
+        /* div를 클릭하고 있을 때 span 태그 글씨색 속성 변경 */
+
+        div:active +p span{
+            color: brown;
+        }
+    </style>
+
+
+
+
+</head>
+<body>
+    <div></div>
+    <p>반응선택자<span>색깔바꾸기</span></p>
+
+
+
+
+
+</body>
+</html>
