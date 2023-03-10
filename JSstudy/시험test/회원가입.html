@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+
+</head>
+<body>
+    <form action="#">
+    <table width = "400px">
+        <tr bgcolor = "gray" width = "400px" height = "45px">
+            <th colspan="2" style="text-align: left;">Step1 : 아이디/비번 입력</th>
+        </tr>
+        <tr bgcolor = "whitesmoke" height = "35px">
+            <td style="text-align: right;" width = "150px">아이디 :</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr bgcolor = "whitesmoke" height = "35px">
+            <td style="text-align: right;" width = "150px">비밀번호 :</td>
+            <td><input type="password"></td>
+        </tr>
+        <tr bgcolor = "whitesmoke" height = "35px">
+            <td style="text-align: right;" width = "150px">비밀번호 확인 :</td>
+            <td><input type="password"></td>
+        </tr>
+    </table>
+    <table width = "400px">
+        <tr bgcolor = "gray" width = "400px" height = "45px">
+            <th colspan="2" style="text-align: left;">Step2 : 개인정보</th>
+        </tr>
+        <tr bgcolor = "whitesmoke" height = "35px">
+            <td style="text-align: right;" width = "150px">성별 :</td>
+            <td>
+            남<input type="radio" value="남성" name="gender">
+            여<input type="radio" value="여성" name="gender">
+            </td>
+        </tr>
+        <tr bgcolor = "whitesmoke" height = "35px">
+            <td style="text-align: right;" width = "150px">혈액형 :</td>
+            <td>
+                <select>
+                <option value="">A형</option>
+                <option value="">O형</option>
+                <option value="">B형</option>
+                <option value="">AB형</option>
+                </select>
+            </td>
+        </tr>
+        <tr bgcolor = "whitesmoke" height = "35px">
+            <td style="text-align: right;">생일 :</td>
+            <td><input type="date"></td>
+        </tr>
+    </table>
+    <table width = "400px">
+        <tr bgcolor = "gray" width = "400px" height = "45px">
+            <th colspan="2" style="text-align: left;">Step3 : 선호도</th>
+        </tr>
+        <tr bgcolor = "whitesmoke" height = "35px">
+            <td style="text-align: right;" width = "150px">취미 :</td>
+            <td>
+                축구<input type="checkbox" value="축구" name="hobby">
+                야구<input type="checkbox" value="야구" name="hobby">
+                농구<input type="checkbox" value="농구" name="hobby">
+            </td>
+        </tr>
+        <tr bgcolor = "whitesmoke" height = "35px">
+            <td style="text-align: right;" width = "150px">좋아하는 색깔 :</td>
+            <td><input type="color"></td>
+        </tr>
+    </table>
+    <table width = "400px">
+        <tr bgcolor = "gray" width = "400px" height = "45px">
+            <th colspan="2" style="text-align: left;">Step4 : 적고 싶은 말</th>
+        </tr>
+        <tr bgcolor = "whitesmoke" height = "35px">
+            <td>
+                <textarea rows="5" cols="52"></textarea>
+            </td>
+        </tr>
+    </table>
+    <table height = "45px" width = "400px" bgcolor = "whitesmoke" style="text-align: center;">
+        <tr>
+            <td>
+                <input type="submit" value="제출">
+                <input type="reset" value="초기화">
+            </td>
+        </tr>
+    </table>
+    </form>
+
+    <script>
+// 문제 1) Hyper Text에 대해서 서술하고 Hyper Text의 기능을 가진 태그와 속성을 쓰시오.(미완)
+// Hyper Text : 현재 문서에서 다른 문서로 즉시 접근할 수 있는 텍스트
+// a태그
+// 문제 2) 각 번호의 명칭을 서술하시오.
+//   <p>Hyper Text Markup Language</p>
+// 1.---->
+// 2.                                          <----
+// 3.     <------------------------------->
+// 4<.----------------------------------------->
+// 1. 시작태그
+// 2. 끝태그
+// 3. Content(내용)
+// 4. Element(요소)
+// 문제 3) 스타일 시트에서 선택자 적용의 우선순위를 작성하시오.
+// 아이디 선택자(가중치 : 100) = #
+// 클래스 선택자(가중치 : 10) = .
+// 타입 선택자(가중치 : 1) = p
+// 전체 선택자(가중치 : 0) = *
+// 문제 8) 각 태그에 스타일을 적용할 수 있는 계층선택자를 작성하시오.
+// (1) 사과글자에 디자인을 적용시킬 수 있는 선택자를 이어서 서술하시오.(자손 선택자)
+// div #apple
+// (2) 딸기글자에 디자인을 적용시킬 수 있는 선택자를 이어서 서술하시오.(자식 선택자)
+// div>#strawberry
+// (3) 수박글자에 디자인을 적용시킬 수 있는 선택자를 이어서 서술하시오.(근접 후행 선택자)
+// #pineapple + li
+// (4) 포도와 바나나 글자에 디자인을 적용시킬 수 있는 선택자를 이어서 서술하시오.(후행 선택자)
+// #melon~li
+// 문제 9) 각 스타일의 점수를 작성하고, 3개의 스타일이 같은 곳을 가르킨다면 그 해당 부분에
+//           적용되는 글자의 색은 무엇인지 그리고 그 이유가 무엇인지에 대해 서술하시오.
+// (선택자 점수합산)
+// 1. div div 2점
+// 2. div #menu 101점
+// 3. div div p 3점
+// 적용되는색 green
+// 점수와 상관없이 important가 있으면 그걸로 된다 
+
+
+    </script>
+
+
+    
+</body>
+</html>

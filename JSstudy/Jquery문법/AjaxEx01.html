@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btn2 {
+            display: none;
+        } 
+
+    </style>
+</head>
+<body>
+    <input id="userTarget">
+    <button onclick="ajaxCall()" id="btn">요청 전송</button>
+    
+
+    <table border="1" id="movieInfo">
+        <tr id="dd">
+            <td id ="aa">순위</td>
+            <td id ="bb">영화명</td>
+            <td id="cc">개봉일</td>
+
+        </tr>
+        
+        <!-- <tr>
+            <td>1</td>
+        </tr>    
+        <tr> 
+            <td>2</td>
+        </tr>
+        <tr> 
+            <td>3</td>
+        <tr> -->
+
+    </table>
+    <button id="btn2" onclick="inbtn()">가져오기</button>
+
+
+
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+        //ajax -> 비동기 통신방법(제이쿼리기반)
+        //비동기 통신 :화면의 전환 없이 사용자가 원하는
+        //데이터만 주고 받게끔 만드는 것
+        //화면 전체를 요청 보내는 것이 아니라 일부분만 
+        //요청 보내서 데이터를 처리하는 방식 
+        function inbtn(){
+            $("#btn2").click()
+        }
+
+        
+        function ajaxCall(){
+            let nn=document.getElementById('userTarget').value;
+            $.ajax({
+                //1.어디로 요청을 보낼지?!
+                url : "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=f5eef3421c602c6cb7ea224104795888&",//"요청을 보낼 주소",
+                //쿼리스트링 데이터 전송
+                //url에 보내고 싶은 데이터를 key-value 형태로 만들어서
+                //url뒤에 붙여주는 방식
+                //? ?앞까지는 실제 주소 ,?뒤부터는 쿼리스트링으로 데이터를 전송하겠습니다.
+                //& 쿼리스트링으로 데이터를 어려개 보낼때 각각 구분지을수 있는 기호 
+                
+                data : "targetDt="+nn,
+                // dataType : "받아올 데이터 타입",
+                success : function(result){
+                    //result ->요청에 대한 응답데이터
+                    //요청 성공시 실행할 로직
+                    alert("통신성공");
+                    if(btn.style.display != 'none') {
+                        btn2.style.display = 'block';
+                    }
+                  
+                //   $('#userTarget').hide();
+                //   $('#btn').hide();
+                
+                   
+
+                    let movieArray=result.boxOfficeResult.dailyBoxOfficeList;
+                    // $('#aa').empty();                 
+                    // $('#bb').empty();
+                    // $('#cc').empty();
+                    
+                    
+                    
+
+                    $("#dd").empty();
+
+                    // $('#aa').append('<tr><td>순위</td></tr>');
+                    // $('#bb').append('<tr><td>영화명</td></tr>');
+                    // $('#cc').append('<tr><td>개봉일</td></tr>');
+
+                     $('#dd').append('<tr>'+
+                         '<th>순위</th>'+
+                         '<th>영화명</th>'+
+                         '<th>개봉일</th>'+
+                         '</tr>')
+
+                    for(let i =0; i<movieArray.length;i++){
+                        // $('#aa').append('<tr><td>'+movieArray[i].rank+'</td></tr>');
+                        // $('#bb').append('<tr><td>'+movieArray[i].movieNm+'</td></tr>');
+                        // $('#cc').append('<tr><td>'+movieArray[i].openDt+'</td></tr>');
+
+                        $("#dd").append('<tr>'+
+                            '<td>'+movieArray[i].rank+'</td>'+
+                            '<td>'+movieArray[i].movieNm+'</td>'+
+                            '<td>'+movieArray[i].openDt+'</td>'+
+                            '</tr>')
+
+                    
+
+                    // console.log(movieArray[i].movieNm)
+                    // const v = document.createElement("br");
+                    // let tr0=document.querySelector("#aa")
+                    // tr0.append(movieArray[i].rank,v)
+                    // let tr=document.querySelector("#bb")
+                    // tr.append(movieArray[i].movieNm,v)
+                    // let tr2=document.querySelector("#cc")
+                    // tr2.append(movieArray[i].openDt,v)
+                    
+
+                    }
+                    
+                    
+                    
+    
+                },
+                error:function(){
+                    //요청 실패시 실행할 로직
+                    alert("통신실패");
+                    
+                }
+
+                
+            })
+
+        }
+        
+        
+
+
+
+    </script>
+</body>
+</html>

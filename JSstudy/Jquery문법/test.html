@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div>
+        <input type='button' value='버튼' id='btn1'/>
+      </div>
+      <div>
+        <input 
+               type='button' 
+               value='이 버튼을 클릭하세요' 
+               id='btn2'
+               onclick='toggleBtn1()'/>
+      </div>
+
+      <script>
+        function toggleBtn1() {
+  
+  // 토글 할 버튼 선택 (btn1)
+  const btn1 = document.getElementById('btn1');
+  
+  // btn1 숨기기 (display: none)
+  if(btn1.style.display !== 'none') {
+    btn1.style.display = 'none';
+  }
+  // btn` 보이기 (display: block)
+  else {
+    btn1.style.display = 'block';
+  }
+  
+}
+
+
+      </script>
+    
+</body>
+</html>

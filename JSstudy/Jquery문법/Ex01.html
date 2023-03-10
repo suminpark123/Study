@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id ="first">Jquery 첫번째 시도</h1>
+    <h1 id ="first">Jquery 첫번째 시도</h1>
+    <h1 id ="first">Jquery 첫번째 시도</h1>
+
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+        //h1 태그 가져오기
+        let h1=document.getElementById("first");
+        //Jquery 로 가져오기
+        //$ ("태그명or선택자")
+        let h1j =$("#first")//->h1
+
+        console.log(h1.innerText);//자바스크립트 객체로 h1태그를 가져왔다.
+        console.log(h1j.text());//제이쿼리 객체로 h1태그를 가져왔다.
+        //중요 ->자바스크립트의 객체로 가져왔을때의 적용방법이랑
+        //제이쿼리 객체로 가져왔을때의 적용방법(사용법)이 다르다. 
+        
+        //h1 3개 가져오기
+        //$('h1').css('color','red');
+        //배경색 바꾸기
+        //$("h1").css('background-color','orange');
+        $("h1").css({
+            "color":"red",
+            "background-color":"orange"
+                    
+        })
+    </script>
+
+
+
+    
+</body>
+</html>

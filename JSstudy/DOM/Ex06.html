@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id =img src="엘티이파일319.jpg">
+    <button id =btn onclick="aa()">이미지 변경</button>
+
+
+
+    <script>
+        let num =1;
+        //버튼이 클릭 되었을때 이미지를 변경해주세요
+        // -->이미지 태그의 src 속성을 변경 해줘야한다.
+        function aa(){
+            
+            let img = document.getElementsByTagName("img");//유사배열
+           //let img =document.getElementById("img");
+            //꼭 인덱스랑 같이 사용해줘야함.
+            // img[0].setAttribute("src","K-085.png");
+             
+            if(num%2!=0){
+                img[0].setAttribute("src","K-085.png")
+                
+                num++;
+            }
+            else if(num%2==0){
+                img[0].setAttribute("src","엘티이파일319.jpg")
+                
+                num++;
+            }            
+             
+             
+        }
+
+
+
+
+    </script>
+
+
+
+    
+</body>
+</html>

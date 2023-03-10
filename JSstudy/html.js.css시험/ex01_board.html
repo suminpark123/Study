@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 400px;
+           
+        }
+         .trh{
+            height: 50px;
+            background-color: gray;
+            text-align: left;
+        }
+        .trow{
+            height: 35px;
+            background-color: whitesmoke;
+        } 
+
+        .tdright{
+            text-align: right;
+        }
+       
+
+
+
+
+    </style>
+
+
+</head>
+<body>
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+      
+        <form>
+        <center>
+         <table>
+            
+             
+             <tr class="trh">
+                
+                <th colspan="2">step1 : 아이디/비번 입력</th> 
+            
+                
+            
+    
+            </tr>
+            
+            <tr class="trow">
+                
+                <td class="tdright">아이디 :</td>
+                <td><input id="userid" type="text"/></br></td>
+            
+                
+            </tr>
+            <tr class="trow">
+                <td class="tdright">비밀번호 :</td>
+                <td><input id="pwd" type="password"/></br></td>
+    
+            </tr>
+            <tr class="trow">
+                <td class="tdright">비밀번호 확인:</td>
+                <td><input id="pwdcheck" type="password"/></br></td>      
+    
+            </tr>
+            
+         </table>
+         <table>
+          
+            
+            <tr class="trh">
+                
+                <th colspan="2">step2 : 개인정보</th> 
+          
+            
+    
+            </tr>
+            <tr class="trow">
+                <td class="tdright">성별 :</td>
+                <td> 남<input type="radio" name="ck1" value="m">
+                    여<input type="radio" name="ck1" value="w">
+                </td>
+            
+                
+            </tr>
+            <tr class="trow">
+                <td class="tdright">혈액형 :</td>
+                <td>
+                    <select name="btype">
+                    <option value="A형">A형</option>
+                    <option value="B형">B형</option>
+                    <option value="AB형">AB형</option>
+                    <option value="O형">O형</option>
+                    </select>
+                </td>
+    
+            </tr>
+            <tr class="trow">
+                <td class="tdright">생일 :</td>
+                <td>             
+                    <input type="text" value="연도-월-일" onclick="this.value='';" />            
+                </td>      
+    
+            </tr>
+         </table>
+         <table>
+            
+            <tr class="trh">
+                
+                <th colspan="2">step3 : 선호도</th>    
+    
+            </tr>
+            <tr class="trow">
+                <td class="tdright">취미 :</td>
+                <td>
+                    축구<input type="checkbox" name="ck2" value="축구">
+                    야구<input type="checkbox" name="ck2" value="야구">
+                    농구<input type="checkbox" name="ck2" value="농구"> 
+                </td>
+            
+                
+            </tr>
+            <tr class="trow">
+                <td class="tdright">좋아하는 색깔 :</td>
+                <td>
+                    <input type='color' id='BestColor' value='#000000'>
+                </td>
+    
+            </tr>
+         </table>
+         <table>
+            <tr class="trh">
+                
+                <th colspan="1">step4 : 적고 싶은 말</th>    
+    
+            </tr>
+        </table>
+        
+            <textarea rows="5" cols="60" name="contents"></textarea>
+            <br>
+            
+                <input type="submit" value ="제출">
+                <input type="reset" value="초기화">
+                
+        </center>
+        </form>   
+         
+    </body>
+    </html>
+    
+
+
+
+
+
+    
+</body>
+</html>

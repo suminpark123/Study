@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //const로 선언 한 변수는 기본적으로 값은 바꿀수 없다
+        //const로 담긴 값이 객체 형식 같은 주소값이라면 해당하는 변수는
+        //주소값을 참조하는 변수이기 때문에 값을 바꿀 수 있다.
+        const person = {
+            name : "승환"            
+
+        }
+        console.log(person.name);
+        person.name='강우';
+        console.log(person.name);
+        
+
+        //map 함수 =>기존 배열을 특정규칙을 가진 새로운 배열로 만드는 함수
+        let array =[3,4,5,6];
+        let array2 =array.map(function(data){//function -->콜백 함수
+            //콜백함수 : 특정상황 또는 특정기능(함수)이 실행돼졌을때 자동으로 실행되게끔 만들어진 함수
+            //data --> 자동으로 array 안에 있는 원소를 하나하나 전부 가져온다.
+            return data*3;//data*3-->새로운 배열을 만들기 위한 규칙
+        });
+        ///array에 담긴 값 *3한 내용을 출력 시켜주세요
+        // for(let i =0; i<array.length; i++){
+        //     console.log(array[i]*3)
+        //     array2.push(rray[i]*3)
+        //     array2[i]=array[i]*3
+            
+        // }
+        console.log(array2)
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>

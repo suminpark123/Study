@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <h1 id="aa">web</h1>
+    <p class="bb">web2</p>
+    <p class="bb">나만의</p>
+    <ul>
+        <li class="cc">ht</li>
+        <li class="cc">cs</li>
+        <li class="cc">js</li>
+
+    </ul>
+
+    <script>
+        let q1 =document.getElementById('aa').innerText;
+        console.log(q1)
+
+        let q2 =document.getElementsByClassName('bb')[1].innerText;
+        console.log(q2)
+
+        for(let i=0; i<document.getElementsByTagName('li').length;i++){
+            let q3=document.getElementsByTagName('li')[i].innerText;
+            console.log(q3)
+            
+        }
+
+
+
+
+    </script>
+    
+</body>
+</html>

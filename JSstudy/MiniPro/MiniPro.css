@@ -1,0 +1,54 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+table {
+  width: 80%;
+  height: 80%;
+}
+#title {
+  text-align: center;
+}
+#proImgDiv {
+  float: left;
+  right: -8%;
+  position: relative;
+}
+#proImg {
+  text-align: center;
+  vertical-align: middle;
+}
+#addPro {
+  background-color: transparent;
+  border: 0;
+  vertical-align: middle;
+  margin-right: 8%;
+}
+.btnImg {
+  width: 50px;
+  height: 50px;
+}
+#minusPro {
+  background-color: transparent;
+  border: 0;
+  vertical-align: middle;
+  margin-left: 8%;
+}
+
+.com-container {
+  background-color: orange;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: flex-start;
+  align-items: center;
+}
+.addComment {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

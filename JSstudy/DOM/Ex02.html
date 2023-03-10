@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #shape{
+            background-color: blue;
+            width: 100px;
+            height: 100px;
+        }
+        /* #sh1{
+            background-color: blue;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        } */
+
+
+
+    </style>
+</head>
+<body>
+    
+    
+    <div id="shape"></div>
+    <br>
+    <!-- <div id="sh1"></div> -->
+    <button onclick="cc()">원</button>
+    <button onclick="sq()">직사각형</button>
+
+
+    <h1>Test1</h1>
+    <h1>Test2</h1>
+    <h1>Test3</h1>
+    <h1>Test4</h1>
+
+
+    <script>
+        //1. 원->클릭 div 태그가 노란색원으로 만들어지게끔
+        function cc(){
+            document.getElementById("shape").style.width="100px"
+            document.getElementById("shape").style.borderRadius="50%";
+            document.getElementById("shape").style.backgroundColor='yellow';
+            
+            
+            
+         }
+         //2. 직사각형 빨강색
+         function sq(){
+            document.getElementById("shape").style.width="150px";
+            document.getElementById("shape").style.borderRadius="0%";
+            document.getElementById("shape").style.backgroundColor='red';
+
+           
+            
+         }
+
+         var h1=document.getElementsByTagName("h1");
+         console.log(h1);
+        //  유사배열 :-->크기가 정해져 있지 않다.
+        // ,어떤 데이터 타입도 사용가능
+        // ==>차이점 : push, pop 등 배열 관련된 함수를 사용 할 수 없다.
+        h1[0].innerText="Test10"
+
+        console.log(h1[2]);
+    </script>
+    
+
+
+    
+
+
+
+
+
+
+</body>
+</html>

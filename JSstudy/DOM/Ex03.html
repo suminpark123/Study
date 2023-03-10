@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>사과</li>
+        <li>멜론</li>
+        <li>파인애플</li>
+
+    </ul>
+
+    <script>
+        let ff = document.getElementsByTagName("li");
+       
+        ff[0].style.color="red";
+        ff[1].style.color="green";
+        ff[2].style.color="yellow";
+
+        ff[0].innerText="한입 베어문 사과";
+        console.log(ff[0].innerText);    
+
+        //innerText ->HTML 태그 내부의 content 값으로 접근해서
+        //해당하는 값을 가져오거나 새로운 값으로 바꿀수 있는 기능을 한다.
+        
+
+
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <input id="userTarget">
+    <button onclick="Call()">요청 전송</button>
+
+    <table border="1" id="movieInfo">
+        <tr>
+            <td>순위</td>
+            <td>영화명</td>
+            <td>개봉일</td>
+        </tr>
+    </table>
+    <script>
+        let movieArray = data.boxOfficeResult.dailyBoxOfficeList;
+        //Javascript 비동기 통신 (fetch~ then)  
+        function Call(){
+            let inputData=document.querySelector('#userTarget').value;
+            let url=`http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=f5eef3421c602c6cb7ea224104795888&targetDt=${inputData}`
+            //fetch(요청을 보낼 주소)
+            fetch(url)
+            .then((result)=>result.json()=>{
+                alert("성공");
+                
+                let movieArray = data.boxOfficeResult.dailyBoxOfficeList;
+                for(let i=0;i<movieArray.length;i++){
+                    //순위, 영화제목, 개봉일
+                    //movieArray[i] -> 하나의 영화 객체
+                    console.log(movieArray[i].movieNm);//영화제목
+                    console.log(movieArray[i].rank);//순위
+                    console.log(movieArray[i].openDt);//개봉일
+
+                    let movieName = movieArray[i].movieNm;
+                    let movieRank = movieArray[i].rank;
+                    let movieOpen = movieArray[i].openDt;
+                   
+                    
+                    let tr = document.createElement("tr");
+                    let tdRank = document.createElement("td");
+                    tdRank.innerText = movieRank;
+                    let tdName = document.createElement("td");
+                    tdName.innerText = movieName;
+                    let tdOpen = document.createElement("td");
+                    tdOpen.innerText = movieOpen;
+
+                    tr.append(tdRank);
+                    tr.append(tdName);
+                    tr.append(tdOpen);
+
+                    let movieInfo = document.getElementById("movieInfo");
+                    movieInfo.append(tr);
+
+                }      
+            }
+            
+            
+            
+            
+            
+            
+            )
+           // .then((data)=>{
+                //두번째 then에서 기능 정의 가능
+                
+                //resutl -> 요청에 대한 응답데이터!
+                //요청 성공시 실행할 로직
+              //  alert("통신성공!");
+                //일별 박스오피스만 출력!
+                
+        
+                 
+           // })
+        
+        }
+
+
+
+
+    </script>
+
+
+
+
+
+    
+</body>
+</html>

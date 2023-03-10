@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+
+</head>
+<body>
+    <h1 id="first">첫번째 Javascript</h1>
+    <button id="btn">원상복구</button>
+    <script>
+        // Javascript 로 h1 태그를 조작 해보자
+        //document.querySelector-->h1 태그
+        //document.querySelector("#first").style.color="red"
+        //Javascript에서는 ;은 권장 사항이다
+
+        //h1 태그가 클릭 됐을때 색상을 바꾸고 싶습니다.
+        //내용도 바꾸고 싶습니다. '신나는 금요일'
+      
+        // document.querySelector("#btn").addEventListener("click",function(){
+        //     document.querySelector("#first").style.color="black";
+        //     document.querySelector("#first").innerText="첫번째 Javascript";
+        // });
+        let num =1; 
+      
+            //addEventListener=>웹페이지 실행시 페이지가 끝날때까지 게속 실행
+        document.querySelector("#first").addEventListener("click",function(){
+            if(num%2!=0){
+                document.querySelector("#first").style.color="red";
+                document.querySelector("#first").innerText="신나는금요일";
+                num++;
+            }
+            else if(num%2==0){
+                document.querySelector("#first").style.color="black";
+                document.querySelector("#first").innerText="첫번째 Javascript";
+                num++;
+            }
+        });
+        
+        
+
+        
+
+    </script>
+
+</body>
+</html>

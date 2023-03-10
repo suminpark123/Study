@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //person 이라는 객체를 만들어서
+        //gender , address, favmovie, favFood
+        //라는 키값으로 데이터를 저장해주세요
+        //person 이라는 객체안에 show 라는 키값으로
+        //성별,주소,영화,음식을 출력시키는 기능을 만들어주세요
+        let person={
+            gender :"남자",
+            address :"오치동",
+            favmovie : "마블",
+            favFood : "고기",
+            show : function(){
+                console.log("성별:"+this.gender+"\t주소 :"+this.address+"\t영화:"+this.favmovie+"\t음식 :"+this.favFood);
+            }
+            
+        }
+
+        person.show();
+
+
+        //객체 데이터 변경
+        person.address="전주";
+        person.favFood='탕수육';
+        //전화번호를 저장 시키고 싶습니다.
+        //객체생성후 key-value 추가
+        person.number="01057786851";
+        console.log(person.number);
+
+       
+
+
+
+
+    </script>
+
+
+
+
+
+
+    
+</body>
+</html>

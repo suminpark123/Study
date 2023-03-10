@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="userTarget">
+    <button onclick="ajaxCall()">요청 전송</button>
+
+    <table border="1" id="movieInfo">
+        <tr>
+            <td>순위</td>
+            <td>영화명</td>
+            <td>개봉일</td>
+        </tr>
+    </table>
+
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+        //ajxa -> 비동기 통신 방법!(제이쿼리기반!)
+        //비동기 통신 : 화면의 전환 없이 사용자가 원하는
+        //데이터만 주고 받게끔 만드는것!
+        //화면 전체를 요청 보내는 것이 아니라 일부분만
+        //요청 보내서 데이터를 처리하는 방식!
+        
+       
+        function ajaxCall(){
+            //2.
+            let inputDt = document.getElementById("userTarget").value;
+
+            $.ajax({
+            //1.어디로 요청을 보낼지?!
+            url : "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=f5eef3421c602c6cb7ea224104795888&",
+            //쿼리스트링 데이터 전송! --->get 방법
+            //url에 보내고 싶은 데이터를 key-value 형태로 만들어서
+            //url뒤에 붙여주는방식!
+            //?  ?앞까지는 실제 주소 , ?뒤부터 쿼리스트링으로 데이터를 전송하겠습니다!
+            //&  쿼리스트링으로 데이터를 여러개 보낼때 각각 구분지을수 있는 기호!
+            data : "targetDt="+inputDt,
+            //dataType : "받아올 데이터 타입",
+            success : function(result){
+                //resutl -> 요청에 대한 응답데이터!
+                //요청 성공시 실행할 로직
+                alert("통신성공!");
+                //일별 박스오피스만 출력!
+                
+                //미션임파서블 개봉일 출력!
+                console.log(result.boxOfficeResult.dailyBoxOfficeList[0].openDt);
+
+                //영화제목 전부 출력
+                let movieArray = result.boxOfficeResult.dailyBoxOfficeList;
+
+                for(let i=0;i<movieArray.length;i++){
+                    //순위, 영화제목, 개봉일
+                    //movieArray[i] -> 하나의 영화 객체
+                    console.log(movieArray[i].movieNm);//영화제목
+                    console.log(movieArray[i].rank);//순위
+                    console.log(movieArray[i].openDt);//개봉일
+
+                    let movieName = movieArray[i].movieNm;
+                    let movieRank = movieArray[i].rank;
+                    let movieOpen = movieArray[i].openDt;
+                    //백틱 -->변수를 문자열이랑 같이 사용하자!!(템플릿문자열)
+                    //` ` 이용 ->안에있는 모든 값은 기본적으로 문자열로 인식
+                    //` ` 안에서 변수를 사용하고 싶다면 ${변수명}
+                    $("#movieInfo").append(`<tr><td>${movieRank}</td><td>${movieName}</td><td>${movieOpen}</td></tr>`)
+                    
+                    // <tr>
+                    //     <td>영화순위</td>
+                    //     <td>영화이름</td>
+                    //     <td>영화오픈</td>    
+                    // </tr>
+
+                    // let tr = document.createElement("tr");
+                    // let tdRank = document.createElement("td");
+                    // tdRank.innerText = movieRank;
+                    // let tdName = document.createElement("td");
+                    // tdName.innerText = movieName;
+                    // let tdOpen = document.createElement("td");
+                    // tdOpen.innerText = movieOpen;
+
+                    // tr.append(tdRank);
+                    // tr.append(tdName);
+                    // tr.append(tdOpen);
+
+                    // let movieInfo = document.getElementById("movieInfo");
+                    // movieInfo.append(tr);
+
+
+                }
+
+
+
+            },
+            error:function(){
+                //요청 실패시 실행할 로직
+                alert("통신 실패!");
+            }
+            });
+        }
+
+
+    </script>
+</body>
+</html>

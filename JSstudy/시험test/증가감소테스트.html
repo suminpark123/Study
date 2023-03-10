@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h3 style="display: inline;">Like! :하트1:</h3>
+    <h3 id="good" style="display: inline;">0</h3>
+    <br>
+    <button onclick="plus()">+1증가</button>
+    <button onclick="minus()">-1감소</button>
+    <button onclick="clear1()">초기화</button>
+    <script>
+        let good1 = document.getElementById("good")
+        let cnt = 0
+        function plus() {
+            cnt = Number(good1.innerText)
+            cnt++
+            good1.innerText = cnt
+    }
+    function minus() {
+        if (Number(good1.innerText) > 0) {
+            cnt = Number(good1.innerText)
+            cnt--
+            good1.innerText = cnt
+        } else {
+            Number(good1.innerText) == 0
+        }
+    }
+    function clear1() {
+        cnt = Number(good1.innerText)
+            cnt=0
+            good1.innerText = cnt
+    }
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>

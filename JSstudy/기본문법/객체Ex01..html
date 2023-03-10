@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        //객채 : 현실에 있는 물체를 표현 할 수 있는 간접적인 방법
+        //=>현실에 있는 물체에 대해서 데이터(속성)과 기능을 모두 정의해 놓은 것
+        //javascript에서의 객체는 key-value로 쌍을 이루고 있다.
+        //value값을 사용하고싶다면 객체명.key값을 통해서 사용 할 수 있다.
+        //객체 안에서 , 를 통해 key 값을 구분 지을수 있다.
+    
+
+        //key -value : JSON 데이터 형식
+        let phone1 = {
+            name :"승환",
+            number : "01040175180",
+            usim : "AAA0001",
+            camera : function(){
+                //this를  통해서 현재 객체가 가지고 있는 key값을 활용할 수 있다.
+                console.log(this.name+"사진을 찍다");
+            },
+            game : function(){
+                console.log("게임을 하다");
+            }
+
+
+        }
+        
+        console.log(phone1.number);
+        console.log(phone1.usim);
+        phone1.camera();
+        phone1.game();
+    </script>
+
+
+
+    
+</body>
+</html>

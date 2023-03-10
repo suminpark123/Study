@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel ="stylesheet" href="MiniPro.css">
+   
+  </head>
+  <body>
+    <table border="1" >
+      <tr style="height: 5%">
+        <td colspan="3" style="text-align: center">
+          <h1 id="title">SMHRD SHOP</h1>
+        </td>
+      </tr>
+
+      <tr style="height: 50%; text-align: center">
+        <td style="width: 30%">
+          <div>
+            <p>
+              <h1 id="proName">삼다수</h1>
+            </p>
+            <p>
+              <h1 id="proPrice">1000</h1>
+            </p>
+          </div>
+        </td>
+
+        <td style="width: 40%">
+          <div style="float: left;" id="nextPro">
+            <h1 onclick="bb()"><</h1>
+          </div>
+
+          <div id="proImgDiv" >
+            <img src="K-100.png" id="proImg"/>
+          </div>
+
+          <div style="float: right; " id="beforePro">
+            <h1 onclick="aa()">></h1>
+          </div>
+        </td>
+
+        <td style="width: 30%">
+          <div style="text-align: center">
+            <button  id ="addPro" onclick="minus()">
+              <img src="minus.png"  class = "btnImg">
+            </button>
+            
+            <span style="vertical-align: middle;" ><h1 style="display: contents" id="proCnt">0</h1></span>
+            
+            <button id="minusPro"onclick="add()"><img src="plus.png" class = "btnImg"></button>
+            <p>
+              <h2 id="totalPrice">금액 : 0</h2>
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr style="height: 45%">
+        <td colspan="3">
+          <div class="com-container">
+
+            <h3>댓글을 작성하세요</h3>  
+            <div class="addComment">
+              <input style="width: 80%; margin-top: 1%"  id="dat"/>
+              <button onclick="getInput()" style="margin-top: 1%">댓글등록</button>
+            </div>
+            
+            <!-- 댓글이 추가될 태그 commentList -->
+            <div class="commentList"></div>
+            <br>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src ="test.js">
+      
+
+
+    </script>
+    <script src="MiniPro.js">
+      //외부 자바스크립트 파일참조
+      //.js 라는 확장자를 가진 파일을 만들어서
+      //src 속성에 만들어놓은 파일 경로 입력하기
+      
+
+    </script>
+  </body>
+</html>
