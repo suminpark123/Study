@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Ex_1129</string>
+    <string name="test">1</string>
+    <string-array name="bordList">
+        <item>사과1</item>
+        <item>사과2</item>
+        <item>사과3</item>
+        <item>사과4</item>
+        <item>사과5</item>
+
+    </string-array>
+
+</resources>
