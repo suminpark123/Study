@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;java0822.ex02_piggybank&apos; to &apos;piggybank&apos;&#x0D;&#x0A;- Original project: &apos;java0822&apos;&#x0D;&#x0A;- Original element: &apos;java0822.ex02_piggybank&apos;&#x0D;&#x0A;- Renamed element: &apos;java0822.piggybank&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ex02_piggybank&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;java0822{ex02_piggybank.java[ex02_piggybank" matchStrategy="1" name="piggybank" qualified="false" references="true" similarDeclarations="false" stamp="1661138020218" textual="false" version="1.0"/>
+</session>

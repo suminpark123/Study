@@ -1,0 +1,12 @@
+package java0811;
+
+import java.util.Scanner;
+
+public class Ex09_보충3번 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+	}
+
+}

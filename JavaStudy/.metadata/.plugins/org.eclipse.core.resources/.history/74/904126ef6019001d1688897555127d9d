@@ -1,0 +1,32 @@
+package java0811;
+
+import java.util.Scanner;
+
+public class Ex11_보충5번 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("선풍기 풍속을 조절합니다.");
+		System.out.println("1번 : 약, 2번: 중,3번 : 강");
+		System.out.println("선택한 번호 :");
+		int x=sc.nextInt();
+		
+		if(x==1) {
+			System.out.println("약한 바람이 나옵니다.");
+		}
+		else if(x==2) {
+			System.out.println("중간 바람이 나옵니다.");
+		}
+		else if(x==3) {
+			System.out.println("강한 바람이 나옵니다.");
+		}
+		
+	
+		
+
+	}
+
+}

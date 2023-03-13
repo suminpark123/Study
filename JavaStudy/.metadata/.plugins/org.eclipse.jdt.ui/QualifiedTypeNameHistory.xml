@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java0822.piggybank"/>
+    <fullyQualifiedTypeName name="java0822.Poketmon"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java0823.StudentScore"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="java0825.Music"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="java.lang.ClassNotFoundException"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="java.sql.SQLException"/>
+    <fullyQualifiedTypeName name="Model.MerberVO"/>
+    <fullyQualifiedTypeName name="Model.MemberVO"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="org.apache.hadoop.mapreduce.Reducer"/>
+    <fullyQualifiedTypeName name="org.apache.hadoop.io.IntWritable"/>
+    <fullyQualifiedTypeName name="org.apache.hadoop.io.Text"/>
+    <fullyQualifiedTypeName name="java.lang.Object"/>
+</qualifiedTypeNameHistroy>

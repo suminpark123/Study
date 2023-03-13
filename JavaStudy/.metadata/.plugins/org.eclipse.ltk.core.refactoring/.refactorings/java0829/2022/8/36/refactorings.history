@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;ex01.Nethod&apos; to &apos;Method&apos;&#x0D;&#x0A;- Original project: &apos;java0829&apos;&#x0D;&#x0A;- Original element: &apos;ex01.Nethod&apos;&#x0D;&#x0A;- Renamed element: &apos;ex01.Method&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Nethod&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;ex01{Nethod.java[Nethod" matchStrategy="1" name="Method" qualified="false" references="true" similarDeclarations="false" stamp="1661735039898" textual="false" version="1.0"/>
+</session>

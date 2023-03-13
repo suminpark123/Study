@@ -1,0 +1,14 @@
+package java0811;
+
+public class Ex13_보충7번for {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	for(int i=21; i<58; i++) {
+		System.out.println(i);
+	}
+
+	}
+
+}
